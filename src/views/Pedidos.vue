@@ -1,16 +1,15 @@
 <template>
   <div>
-    <h1>Home</h1>
+    <h1>Pedidos</h1>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'Home',
-  components: {
-  }
+export default{
+  name: 'Footer'
 }
 </script>
+
 
 <style scoped>
 
