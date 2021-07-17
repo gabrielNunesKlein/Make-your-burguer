@@ -9,27 +9,61 @@
                 <label for="pao">Ecolha o pão:</label>
                 <select name="pao" id="pao" v-model="pao">
                     <option value="">Selecione o pão</option>
-                    <option value="Integral">Integral</option>
+                    <option v-for="pao in paes" :key="pao.id" :value="pao.tipo">{{ pao.tipo }}</option>
                 </select>
             </div>
             <div class="input-container">
                 <label for="carne">Ecolha a carne do seu burguer:</label>
                 <select name="carne" id="carne" v-model="carne">
                     <option value="">Selecione a carne</option>
-                    <option value="Maminha">Maminha</option>
+                    <option v-for="carne in carnes" :key="carne.id" :value="carne.tipo">{{ carne.tipo }}</option>
                 </select>
             </div>
-            <div id="checkbox-container" class="input-container">
+            <div id="opcionais-container" class="input-container">
                 <label id="opcionais-title" for="opcionais">Selecione os opcionais:</label>
-                <div class="checkbox-container">
-                    <input type="checkbox" name="opcionais" v-model="opcionais" value="Salame">
-                    <span>Salame</span>
+                <div class="checkbox-container" v-for="opcional in opcionaisdata" :key="opcional.id">
+                    <input type="checkbox" name="opcionais" v-model="opcionais" :value="opcional.tipo">
+                    <span>{{ opcional.tipo }}</span>
                 </div>
             </div>
             <input type="submit" class="submit-btn" value="Criar meu burguer !">
         </form>
     </div>
 </template>
+
+<script>
+export default{
+    name: 'BurguerForm',
+    data(){
+        return{
+            paes: null,
+            carnes: null,
+            opcionaisdata: null,
+            nome: null,
+            pao: null,
+            carne: null,
+            opcionais: [],
+            status: 'Solicitado',
+            msg: null
+        }
+    },
+    methods:{
+        async getIngreditentes(){
+            const req = await fetch("http://localhost:3000/ingredientes");
+            const data = await req.json();
+
+            console.log(data)
+            this.paes = data.paes;
+            this.carnes = data.carnes;
+            this.opcionaisdata = data.opcionais;
+        }
+    },
+    mounted() {
+        this.getIngreditentes();
+    }
+}
+</script>
+
 
 <style scoped>
     #burguer-form{
