@@ -112,6 +112,18 @@
       ],
       "status": "Solicitado",
       "id": 3
+    },
+    {
+      "nome": "Pedro",
+      "carne": "Picanha",
+      "pao": "3 Queijos",
+      "opcionais": [
+        "Cheddar",
+        "Tomate",
+        "Bacon"
+      ],
+      "status": "Solicitado",
+      "id": 4
     }
   ]
 }
