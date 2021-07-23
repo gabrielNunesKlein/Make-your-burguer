@@ -110,8 +110,20 @@
         "Salame",
         "Tomate"
       ],
-      "status": "Solicitado",
+      "status": "Finalizado",
       "id": 5
+    },
+    {
+      "nome": "Jurandir",
+      "carne": "Alcatra",
+      "pao": "Integral",
+      "opcionais": [
+        "Bacon",
+        "Pepino",
+        "Tomate"
+      ],
+      "status": "Solicitado",
+      "id": 6
     }
   ]
 }
