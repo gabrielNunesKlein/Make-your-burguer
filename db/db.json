@@ -90,30 +90,6 @@
       "id": 1
     },
     {
-      "nome": "Carlos",
-      "carne": "Veggie burger",
-      "pao": "Integral",
-      "opcionais": [
-        "Pepino",
-        "Tomate",
-        "Cebola roxa"
-      ],
-      "status": "Solicitado",
-      "id": 2
-    },
-    {
-      "nome": "Maria",
-      "carne": "Veggie burger",
-      "pao": "Integral",
-      "opcionais": [
-        "Tomate",
-        "Pepino",
-        "Cebola roxa"
-      ],
-      "status": "Solicitado",
-      "id": 3
-    },
-    {
       "nome": "Pedro",
       "carne": "Picanha",
       "pao": "3 Queijos",
@@ -124,6 +100,18 @@
       ],
       "status": "Solicitado",
       "id": 4
+    },
+    {
+      "nome": "Carlos",
+      "carne": "Maminha",
+      "pao": "3 Queijos",
+      "opcionais": [
+        "Bacon",
+        "Salame",
+        "Tomate"
+      ],
+      "status": "Solicitado",
+      "id": 5
     }
   ]
 }
